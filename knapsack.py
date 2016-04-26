@@ -11,7 +11,7 @@ def knapsack(items, max_weight):
 
     # Include the first item
     if first.weight <= max_weight:
-    value_with_first = knapsack(rest, max_weight - first.weight) + first.value
-    return max(value_with_first, value_without_first)
-else:
-    return value_without_first
+        value_with_first = knapsack(rest, max_weight - first.weight) + first.value
+        return max(value_with_first, value_without_first)
+    else:
+        return value_without_first
