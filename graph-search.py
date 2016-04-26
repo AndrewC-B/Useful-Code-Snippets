@@ -4,6 +4,7 @@ def dfs(graph, start):
 
     while len(stack) > 0:
         parent, current = stack.pop(0)
+        yield parent, current
         new_children = graph[current] - visited
         stack += ((current, child) for child in new_children)
         visited |= new_children
@@ -15,6 +16,7 @@ def bfs(graph, start):
 
     while len(queue) > 0:
         parent, current = queue.pop(0)
+        yield parent, current
         new_children = graph[current] - visited
         queue += ((current, child) for child in new_children)
         visited |= new_children
