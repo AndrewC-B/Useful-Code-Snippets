@@ -6,7 +6,6 @@ def fast_exp(a, b):
     cumulative = a
     counter = 1
 
-
     while counter <= b:
         if b & counter > 0:
             ans *= cumulative
