@@ -21,6 +21,19 @@ def bfs(graph, start):
         queue += ((current, child) for child in new_children)
         visited |= new_children
 
+
+def shortest_path(graph, start, end):
+    paths = {None: []}  # {destination: [path]}
+
+    for parent, child in bfs(graph, start):
+        paths[child] = paths[parent] + [child]
+
+        if child == end:
+            return paths[child]
+
+    return None # or raise appropriate exception
+
+
 graph = {'A': {'B', 'C',’E'},
          'B': {'A','C', ‘D'},
          'C': {‘D'},
