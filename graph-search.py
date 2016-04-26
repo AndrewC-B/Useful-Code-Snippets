@@ -18,3 +18,10 @@ def bfs(graph, start):
         new_children = graph[current] - visited
         queue += ((current, child) for child in new_children)
         visited |= new_children
+
+graph = {'A': {'B', 'C',’E'},
+         'B': {'A','C', ‘D'},
+         'C': {‘D'},
+         'D': {‘C'},
+         'E': {'F', ‘D'},
+         'F': {‘C'}}
