@@ -3,7 +3,7 @@ def dfs(graph, start):
     visited = set(start)
 
     while len(stack) > 0:
-        parent, current = stack.pop(0)
+        parent, current = stack.pop()
         yield parent, current
         new_children = graph[current] - visited
         stack += ((current, child) for child in new_children)
