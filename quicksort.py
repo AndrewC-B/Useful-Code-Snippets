@@ -5,7 +5,7 @@ def qs(items):
 	equal = []
 	larger = []
 
-	for item items:
+	for item in items:
 		if item < pivot:
 			smaller.append(item)
 		elif item == pivot:
