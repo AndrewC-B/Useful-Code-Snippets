@@ -16,7 +16,7 @@ def qs(items):
 	return qs(smaller) + equal + qs(larger)
 	
 	
-def quicksort(array, begin=0, end=None):
+def qs_in_place(array, begin=0, end=None):
     if end is None:
         end = len(array) - 1
     
@@ -24,8 +24,9 @@ def quicksort(array, begin=0, end=None):
         return
     
     pivot = partition(array, begin, end)
-    quicksort(array, begin, pivot-1)
-    quicksort(array, pivot+1, end)
+    qs_in_place(array, begin, pivot-1)
+    qs_in_place(array, pivot+1, end)
+    
     
 def partition(array, begin, end):
     pivot = begin
