@@ -8,10 +8,10 @@ def qs(items):
 	for item in items:
 		if item < pivot:
 			smaller.append(item)
-		elif item == pivot:
-			equal.append(item)
-		else:  # item > pivot
+		elif item > pivot:
 			larger.append(item)
+		else:  # item == pivot
+			equal.append(item)
 	
 	return qs(smaller) + equal + qs(larger)
 	
