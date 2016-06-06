@@ -28,14 +28,14 @@ def qs_in_place(array, begin=0, end=None):
     qs_in_place(array, pivot+1, end)
     
     
-def partition(array, begin, end):
-    pivot = begin
+def partition(array, start, end):
+    pivot = start
     
-    for i in xrange(begin+1, end+1):
-        if array[i] <= array[begin]:
+    for i in range(start+1, end+1):
+        if array[i] <= array[start]:
             pivot += 1
             array[i], array[pivot] = array[pivot], array[i]
     
-    array[pivot], array[begin] = array[begin], array[pivot]
+    array[pivot], array[start] = array[start], array[pivot]
     
     return pivot
