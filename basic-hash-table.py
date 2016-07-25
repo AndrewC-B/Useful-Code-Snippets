@@ -19,5 +19,5 @@ def MyHashTable(object):
     def remove(self, value):
         self.table[self._find_index(value)] = None
 
-    def in(self, value):
+    def contains(self, value):
         return self.table[self._find_index(value)] is not None
