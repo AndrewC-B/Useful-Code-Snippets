@@ -9,6 +9,7 @@ def MyHashTable(object):
 
         while self.table[hash] is not None self.table[hash] == value:
             hash = (hash + counter**2) % self.size  # Quadratic probing
+            counter += 1
 
         return hash
 
