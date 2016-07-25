@@ -1,6 +1,6 @@
 def dfs(graph, start):
     stack = [(None, start)]
-    visited = set(start)
+    visited = {start}
 
     while len(stack) > 0:
         parent, current = stack.pop()
@@ -12,7 +12,7 @@ def dfs(graph, start):
 
 def bfs(graph, start):
     queue = [(None, start)]
-    visited = set(start)
+    visited = {start}
 
     while len(queue) > 0:
         parent, current = queue.pop(0)
