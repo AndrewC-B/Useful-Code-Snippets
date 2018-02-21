@@ -8,7 +8,7 @@ def knapsack(items, max_weight):
     first = items[0]
     rest = items[1:]
 
-    # Don’t include the first item
+    # Don't include the first item
     value_without_first = knapsack(rest, max_weight)
 
     # Include the first item
